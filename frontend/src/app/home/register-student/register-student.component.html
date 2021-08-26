@@ -31,6 +31,14 @@
             />
           </mat-form-field>
           <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="BirthDate" required/>
+            <mat-datepicker-toggle
+              matSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field>
             <input
               [(ngModel)]="registerData.course"
               matInput
@@ -41,11 +49,13 @@
         </div>
       </mat-card-content>
       <mat-card-actions>
-         <button (click)="registerUser()" 
-         class="button colorButton"
-         mat-raised-button>
-            Register
-         </button>
+        <button
+          (click)="registerUser()"
+          class="button colorButton"
+          mat-raised-button
+        >
+          Register
+        </button>
       </mat-card-actions>
     </mat-card>
   </div>
