@@ -9,10 +9,9 @@ import {
 @Component({
   selector: 'app-register-teacher',
   templateUrl: './register-teacher.component.html',
-  styleUrls: ['./register-teacher.component.css']
+  styleUrls: ['./register-teacher.component.css'],
 })
 export class RegisterTeacherComponent implements OnInit {
-
   registerData: any;
   message: string;
   horizontalPosition: MatSnackBarHorizontalPosition = 'end';
@@ -20,14 +19,10 @@ export class RegisterTeacherComponent implements OnInit {
 
   constructor() {
     this.registerData = {};
-    this.message = ''; 
+    this.message = '';
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  
-
-  registerUser() {}
-
+  registerTeacher() {}
 }
