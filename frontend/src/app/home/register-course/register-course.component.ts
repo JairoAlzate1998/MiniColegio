@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-register-course',
@@ -6,10 +12,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register-course.component.css']
 })
 export class RegisterCourseComponent implements OnInit {
+  registerData: any;
+  message: string;
+  horizontalPosition: MatSnackBarHorizontalPosition = 'end';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
 
-  constructor() { }
+  constructor() { 
+    this.registerData = {};
+    this.message = '';
+  }
 
   ngOnInit(): void {
   }
 
+
+  registerCourse() {}
 }
