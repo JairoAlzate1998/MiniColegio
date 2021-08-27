@@ -27,8 +27,13 @@ const registerTeacher = async (req, res) => {
   });
 
   const result = await teacher.save();
-  if (!result) return res.status(400).send("Error to register teacher");
-  return res.status(200).send({ result });
+  if (!result) return res.status(400).send("Failed to register teacher");
+  try {
+    let jwtToken = teacher.generateJWT();
+    res.status(200).send({ jwtToken });
+  } catch (e) {
+    return res.status(400).send("Token generation failed");
+  }
 };
 
 module.exports = { registerTeacher };

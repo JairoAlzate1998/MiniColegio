@@ -25,8 +25,13 @@ const registerStudent = async (req, res) => {
   });
 
   const result = await student.save();
-  if (!result) return res.status(400).send("Error to register student");
-  return res.status(200).send({ result });
+  if (!result) return res.status(400).send("Failed to register student");
+  try {
+    let jwtToken = student.generateJWT();
+    res.status(200).send({ jwtToken });
+  } catch (e) {
+    return res.status(400).send("Token generation failed");
+  }
 };
 
 module.exports = { registerStudent };
