@@ -9,6 +9,10 @@ import { RegisterCourseComponent } from './home/register-course/register-course.
 import { RegisterSubjectComponent } from './home/register-subject/register-subject.component';
 import { HeaderComponent } from './home/header/header.component';
 import { FooterComponent } from './home/footer/footer.component';
+import { CourseService } from "./services/course.service";
+import { StudentService } from "./services/student.service";
+import { SubjectService } from "./services/subject.service";
+import { TeacherService } from "./services/teacher.service";
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -49,7 +53,12 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatDatepickerModule,
     MatNativeDateModule,
   ],
-  providers: [],
+  providers: [
+    CourseService,
+    StudentService,
+    SubjectService,
+    TeacherService
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
