@@ -8,7 +8,7 @@ const techerSchema = new mongoose.Schema({
   password: String,
   birthDate: Date,
   subjectId: { type: mongoose.Schema.ObjectId, ref: "subject" },
-  codeProfessional: Number,
+  codeProfessional: String,
 });
 
 techerSchema.methods.generateJWT = function () {

@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 
 const courseSchema = new mongoose.Schema({
-  code: Number,
+  code: String,
   name: String,
-  numberStudents: Number,
+  numberStudents: String,
   classroom: String,
 });
 

@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 
 const subjectSchema = new mongoose.Schema({
-  code: Number,
+  code: String,
   name: String,
-  hours: Number,
+  hours: String,
   branch: String,
 });
 
