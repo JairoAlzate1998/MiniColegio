@@ -8,7 +8,7 @@ import { RegisterTeacherComponent } from "./home/register-teacher/register-teach
 const routes: Routes = [
   {
     path: '',
-    component: RegisterStudentComponent,
+    component: RegisterCourseComponent,
     pathMatch: 'full',
   },
   {
