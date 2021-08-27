@@ -31,7 +31,13 @@
             />
           </mat-form-field>
           <mat-form-field>
-            <input matInput [matDatepicker]="picker" placeholder="BirthDate" required/>
+            <input
+              [(ngModel)]="registerData.birthDate"
+              matInput
+              [matDatepicker]="picker"
+              placeholder="BirthDate"
+              required
+            />
             <mat-datepicker-toggle
               matSuffix
               [for]="picker"
